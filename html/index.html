@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <style>
+        body {
+          background: rgb(204,204,204); 
+          width: 21cm;
+          height: 29.7cm;
+          margin: 0 auto;
+        }
+
+        page {
+          background: white;
+          display: block;
+          margin: 0 auto;
+          margin-bottom: 0.5cm;
+          position: relative;
+        }
+
+        page[size="A4"] {  
+          width: 21cm;
+          height: 29.7cm; 
+        }
+
+        @page {
+          size: 21cm 29.7cm;
+          margin: 0mm;
+        }
+
+	header {
+	}
+
+
+	header {
+	   background-image: url("static/image/background-texture2.png");
+           padding: 3cm;
+	   background-size : 30%;
+           background-repeat: repeat;
+	   background-blend-mode: color-burn;
+	   background-color: #2196f3;
+	   background-blend-mode: multiply;
+	}
+
+
+      </style>
+   </head>
+   <body>
+      <page size="A4">
+      <header>
+	      <div>
+      <h1>Scott Williams</h1>
+	      </div>
+      </header>
+      </page>
+      <page size="A4">
+      </page>
+   </body>
+</html>
