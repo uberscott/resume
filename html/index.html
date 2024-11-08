@@ -22,6 +22,9 @@
 }
 
 
+pre {
+    font-style: italic;
+}
 
 
 
@@ -90,7 +93,6 @@
            background-repeat: repeat;
 	   background-color: #2196f3;
 	   background-blend-mode: multiply;
-box-shadow: 0 3px #0b304ecc;
 
 
        font-family: "Space Grotesk", serif;
@@ -127,23 +129,72 @@ header div h1 span {
    font-size: 2cm;
 }
 
-
-#badges {
-   background-color:gray;
-   height:1cm;
+.nothing {
+   color: #426b98;
 }
-#badge ul {
+
+#street-cred {
+   background-color: #547baa;
+}
+
+#street-cred {
    display: flex;
    list-style: none;
    padding: 0;
-}
-
-#email{
    margin: 0;
-   width: 30vw;
-   padding: 0; /* reset */
+   margin-left: auto;
+   margin-right: auto;
 }
 
+
+#street-cred ul {
+   display: flex;
+   justify-content: space-around;
+   list-style: none;
+   padding: 0;
+   margin: 0
+}
+
+#street-cred ul li {
+   margin: 0;
+   padding: 5px; /* reset */
+   padding-top: 10px; /* reset */
+}
+
+#street-cred ul li .badge{
+
+}
+
+main {
+  font-family: "Space Grotesk", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1cm;
+  padding-right: 1cm;
+}
+
+main h2 {
+   color: #10446e;
+   font-size: x-large;
+   margin: 0;
+   margin-top: 0px;
+   margin-bottom: 5px;
+}
+
+main h2::before {
+    content: "$ ";
+    font-family: "jura";
+    font-style: italic;
+    color: #cc0000;
+}
+
+.shell {
+
+}
 
 /*
 #header div h1 span::first-letter {
@@ -153,25 +204,42 @@ header div h1 span {
 
  */
 
-      </style>
+         </style>
    </head>
    <body>
       <page size="A4">
-         <spacer/>
       <header>
          <div><h1><span>S</span>COTT&nbsp;<span>W</span>ILLIAMS</h1>
 
          </div>
 
       </header>
-         <section id="badges">
+         <section id="street-cred">
          <ul>
             <li><img id="email" class="badge" src="https://img.shields.io/badge/email-scott%40mightdevco.com-orange?style=plastic&logo=minutemailer&labelColor=%23333333&link=mailto%3Ascott%40uberscott.com"></li>
-            <li><img id="phone" class="badge" src="https://img.shields.io/badge/phone-323.572.6872-orange?style=plastic&logo=kakaotalk&labelColor=%23333333&link=mailto%3Ascott%40uberscott.com"></li>
-            <li>Farmington, MO</li>
+            <li><img id="phone" class="badge" src="https://img.shields.io/badge/phone-323.572.6872-mauv?style=plastic&logo=theconversation&color=red&logoColor=yellow&labelColor=%23333333"></li>
+            <li><img id="location" class="badge" src="https://img.shields.io/badge/googlemaps-Farmington_MO-blue?style=plastic&color=%232196f3&logo=googlemaps&labelColor=%23333333&logoColor=red"></li>
          </ul>
        </section>
+
+         <main>
+       <section id="titles">
+          <pre>&gt; echo $TITLE</pre>
+          <h2>DevOps | Cloud & SRE Engineer | Software Developer</h2>
+
+         <p>25 years experience in Ops and Software Development. Very strong in Kubernetes, Docker, GCP, AWS, Helm, Skaffold, Terraform, Rust, Java, Flutter/Dart, PostgreSQL, Neo4j.  and more (See the Skills  section for an exhaustive list of Skills.)</p>
+
+         <p>A fan of agile approaches including Test Driven Development, CI/CD pipelines monitoring, identifying and continuously improving on the biggest bottleneck.</p>
+
+       <p>A dedicated mentor to up-and-coming talent.</p>
+
+          <p>Experience working for top companies including: Yahoo, Warner Brothers (as a vendor),TD Ameritrade (Consultant).</p>
+
+           <p>Still loves to code but presently seeking a position in DevOps that is slightly weighted towards Ops for a better work/life balance.  Very interested in finding the right DevOps position and taking ownership of site and process reliability and innovation.
+       </section>
+        </main>
       </page>
       <page size="A4">
-      </page> </body>
+      </page>
+   </body>
 </html>
