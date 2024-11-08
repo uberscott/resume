@@ -27,11 +27,15 @@
 
 
         body {
-          background: rgb(204,204,204); 
+
+           color: #0b304e;
+           background: rgb(204, 204, 204);
           width: 21cm;
           height: 29.7cm;
           margin: 0 auto;
         }
+
+
 
         page {
           background: white;
@@ -48,35 +52,65 @@
 
         @page {
           size: 21cm 29.7cm;
-          margin: 0mm;
+          margin: 0;
         }
 
-	header {
-	}
+
+
+    /*
+       under_emph on blue: 10446e
+       bold on blue 0b304e
+     */
+
+.lesser {
+   color: #10446e;
+}
+
+
+.bold {
+   color: #0b304e;
+}
+
+.attention {
+   color: #FFEE58FF
+}
+
+
+.stellar {
+   color: #F9A825FF;
+}
+
+
 
 
 	header {
 	   background-image: url("static/image/background-texture2.png");
-           padding: 1cm;
-	   min-height: 4cm;
+           padding: 0;
 	   background-size : 30%;
            background-repeat: repeat;
 	   background-color: #2196f3;
 	   background-blend-mode: multiply;
-box-shadow: 0px 5px 10px 2px #000;
+box-shadow: 0 3px #0b304ecc;
+
+
+       font-family: "Space Grotesk", serif;
+       font-optical-sizing: auto;
+       font-weight: 500;
+       font-style: normal;
+       font-size: 0.5cm;
+
+
 	}
 
 	header div {
-border-style: dotted;
-border-color: red;
-border-width: 1px;
-       margin-left: auto;
-       margin-right: auto;
+       margin: 0;
+       padding-top: 0.3cm;
        text-align:center;
 	}
 
 
 header div h1 {
+   margin: 0;
   font-family: "Aldrich", sans-serif;
   font-weight: 800;
   font-style: normal;
@@ -84,12 +118,32 @@ header div h1 {
    font-size: 1.66cm;
    letter-spacing: 0.1cm;
    text-transform: capitalize;
+   text-shadow: 2px 2px 0  #10446ecc;
+   color: black
 }
 
 
 header div h1 span {
    font-size: 2cm;
 }
+
+
+#badges {
+   background-color:gray;
+   height:1cm;
+}
+#badge ul {
+   display: flex;
+   list-style: none;
+   padding: 0;
+}
+
+#email{
+   margin: 0;
+   width: 30vw;
+   padding: 0; /* reset */
+}
+
 
 /*
 #header div h1 span::first-letter {
@@ -103,9 +157,20 @@ header div h1 span {
    </head>
    <body>
       <page size="A4">
+         <spacer/>
       <header>
-         <div><h1><span>S</span>COTT&nbsp;<span>W</span>ILLIAMS</h1></div>
+         <div><h1><span>S</span>COTT&nbsp;<span>W</span>ILLIAMS</h1>
+
+         </div>
+
       </header>
+         <section id="badges">
+         <ul>
+            <li><img id="email" class="badge" src="https://img.shields.io/badge/email-scott%40mightdevco.com-orange?style=plastic&logo=minutemailer&labelColor=%23333333&link=mailto%3Ascott%40uberscott.com"></li>
+            <li><img id="phone" class="badge" src="https://img.shields.io/badge/phone-323.572.6872-orange?style=plastic&logo=kakaotalk&labelColor=%23333333&link=mailto%3Ascott%40uberscott.com"></li>
+            <li>Farmington, MO</li>
+         </ul>
+       </section>
       </page>
       <page size="A4">
       </page> </body>
