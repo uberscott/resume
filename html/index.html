@@ -22,29 +22,7 @@
 }
 
 
-.space-mono-regular {
-    font-family: "Space Mono", monospace;
-    font-weight: 400;
-    font-style: normal;
-}
 
-.space-mono-bold {
-    font-family: "Space Mono", monospace;
-    font-weight: 700;
-    font-style: normal;
-}
-
-.space-mono-regular-italic {
-    font-family: "Space Mono", monospace;
-    font-weight: 400;
-    font-style: italic;
-}
-
-.space-mono-bold-italic {
-    font-family: "Space Mono", monospace;
-    font-weight: 700;
-    font-style: italic;
-}
 
 pre {
     font-style: italic;
@@ -65,7 +43,7 @@ pre {
 
 
         page {
-          background: white;
+          background: #dddddd;
           display: block;
           margin: 0 auto;
           margin-bottom: 0.5cm;
@@ -210,9 +188,9 @@ main h2 {
 }
 
 main h2::before {
-    content: "$ ";
-    font-family: "jura";
-    font-style: italic;
+    content: "> ";
+    font-family: "jura",serif;
+    font-weight: 900;
     color: #cc0000;
 }
 
@@ -226,12 +204,30 @@ main h2::before {
     overflow: hidden;
 }
 
-p {
+html body main section div {
     margin-left: 0.66cm;
 }
 
 .shell {
 
+}
+
+
+
+/*
+#255e87 soft blue
+#ce000f red
+cc9999 faded red
+0c4801 rich gereen
+
+ */
+
+.soft-blu {
+    color: #255e87;
+}
+
+.c1 {
+    color: #255e87;
 }
 
 /*
@@ -242,20 +238,50 @@ p {
 
  */
 
-         </style>
-   </head>
-   <body>
-      <page size="A4">
-      <header>
-         <div><h1><span>S</span>COTT&nbsp;<span>W</span>ILLIAMS</h1>
 
-         </div>
+.space-mono-regular {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
 
-      </header>
-         <section id="street-cred">
-         <ul>
-            <li><img id="email" class="badge" src="https://img.shields.io/badge/email-scott%40mightdevco.com-orange?style=plastic&logo=minutemailer&labelColor=%23333333&link=mailto%3Ascott%40uberscott.com"></li>
-            <li><img id="phone" class="badge" src="https://img.shields.io/badge/phone-323.572.6872-mauv?style=plastic&logo=theconversation&color=red&logoColor=yellow&labelColor=%23333333"></li>
+
+
+.space-mono-regular-italic {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+#skills span {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+#skills span .title {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+
+             </style>
+       </head>
+       <body>
+          <page size="A4">
+          <header>
+             <div><h1><span>S</span>COTT&nbsp;<span>W</span>ILLIAMS</h1>
+             </div>
+
+          </header>
+             <section id="street-cred">
+             <ul>
+                <li><img id="email" class="badge" src="https://img.shields.io/badge/email-scott%40mightdevco.com-orange?style=plastic&logo=minutemailer&labelColor=%23333333&link=mailto%3Ascott%40uberscott.com"></li>
+                <li><img id="phone" class="badge" src="https://img.shields.io/badge/phone-323.572.6872-mauv?style=plastic&logo=theconversation&color=red&logoColor=yellow&labelColor=%23333333"></li>
             <li><img id="location" class="badge" src="https://img.shields.io/badge/location-Farmington_MO-blue?style=plastic&color=%232196f3&logo=googlemaps&labelColor=%23333333&logoColor=red"></li>
          </ul>
        </section>
@@ -263,21 +289,42 @@ p {
          <main>
        <section id="titles">
           <h2>DevOps | Cloud & SRE Engineer | Software Developer</h2>
-
+           <div>
          <p>25 years experience in Ops and Software Development. Very strong in Kubernetes, Docker, GCP, AWS, Helm, Skaffold, Terraform, Rust, Java, Flutter/Dart, PostgreSQL, Neo4j.  and more (See the Skills  section for an exhaustive list of Skills.)</p>
 
          <p>A fan of agile approaches including Test Driven Development, CI/CD pipelines monitoring, identifying and continuously improving on the biggest bottleneck.</p>
 
        <p>A dedicated mentor to up-and-coming talent.</p>
 
-          <p>Experience working for top companies including: Yahoo, Warner Brothers (as a vendor),TD Ameritrade (Consultant).</p>
-
-           <p>Still loves to code but presently seeking a position in DevOps that is slightly weighted towards Ops for a better work/life balance.  Very interested in finding the right DevOps position and taking ownership of site and process reliability and innovation.
+       <p>Still loves to code but presently seeking a position in DevOps that is slightly weighted towards Ops for a better work/life balance.  Very interested in finding the right DevOps position and taking ownership of site and process reliability and innovation.
+       </div>
        </section>
              <section id="skills">
                  <h2>Skills</h2>
 
-             </section>
+                 <div>
+
+
+                     <span class="cat GCP">
+<span class="title">GCP</span><span class="dots">...</span><span>Compute Engine</span><span class="dots">...</span><span>GKE</span><span class="dots">...</span><span>Buckets</span><span class="dots">...</span><span>Pub/Sub</span><span class="dots">...</span><span>Image Registry</span><span class="dots">.</span><br><span>IAM</span><span class="dots">...</span><span>GKE Ingress with managed certs</span><span class="dots">...</span></span>
+                     <span class="cat AWS">
+<span class="title">AWS</span><span class="dots">...</span><span>EC2 S3</span><span class="dots">...</span><span>lambda</span><span class="dots">...</span><span class="dots">.</span><br><span>route 53</span><span class="dots">...</span><span>SQS</span><span class="dots">...</span><span>SNS Beanstalk IAM</span><span class="dots">...</span></span>
+                     <span class="cat OPS">
+<span class="title">OPS</span><span class="dots">...</span><span>Docker</span><span class="dots">...</span><span>Kubernetes</span><span class="dots">..</span><br><span>Helm</span><span class="dots">...</span><span>Skaffold</span><span class="dots">...</span><span>Terraform</span><span class="dots">...</span><span>Kibana</span><span class="dots">...</span><span>Beats</span><span class="dots">...</span><span>Logstash</span><span class="dots">...</span><span class="dots">......</span><br><span>Prometheus</span><span class="dots">...</span><span>Zipkin</span><span class="dots">...</span><span>Grafana</span><span class="dots">...</span><span>Jaeger</span><span class="dots">...</span></span>
+                     <span class="cat OS">
+<span class="title">OS</span><span class="dots">...</span><span>Mac</span><span class="dots">...</span><span>Windows</span><span class="dots">...</span><span class="dots">..</span><br><span>Linux</span><span class="dots">...</span><span>Ubuntu</span><span class="dots">...</span><span>RedHat Enterprise</span><span class="dots">...</span><span>Alpine</span><span class="dots">...</span><span>iOS</span><span class="dots">...</span><span>Android</span><span class="dots">...</span></span>
+                     <span class="cat CI/CD">
+<span class="dots">..</span><br><span class="title">CI/CD</span><span class="dots">...</span><span>Jenkins</span><span class="dots">...</span><span>Concourse CI</span><span class="dots">...</span><span>GitHub Actions</span><span class="dots">...</span><span class="dots">..............</span><br><span>Blu-Ray Disc development (BD-J)</span><span class="dots">...</span></span>
+                     <span class="cat LANG">
+<span class="title">LANG</span><span class="dots">...</span><span>Rust</span><span class="dots">...</span><span>Java</span><span class="dots">...</span><span>Dart</span><span class="dots">...</span><span class="dots">..</span><br><span>HTML5</span><span class="dots">...</span><span>TypeScript</span><span class="dots">...</span><span>JavaScript</span><span class="dots">...</span><span>Golang</span><span class="dots">...</span><span>Python</span><span class="dots">...</span></span>
+                     <span class="cat MISC">
+<span class="title">MISC</span><span class="dots">...</span><span>Redis</span><br><span>Memcached</span><span class="dots">...</span><span>RabbitMQ</span><span class="dots">...</span><span>Kafka</span><span class="dots">...</span><span>Git</span><span class="dots">...</span><span>GitHub Actions</span><span class="dots">...</span><span class="dots">..........</span><br><span>ElasticSearch</span><span class="dots">...</span><span>Solr</span><span class="dots">...</span></span>
+                     <span class="dots">.........................................</span><br>
+                 </div>
+
+
+                 </section>
+
         </main>
       </page>
       <page size="A4">
