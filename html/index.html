@@ -2,10 +2,10 @@
 <html>
    <head>
 
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Jura:wght@300..700&family=Nabla:EDPT,EHLT@0,0&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Jura:wght@300..700&family=Nabla:EDPT,EHLT@0,0&family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
       <style>
 
 .aldrich-regular {
@@ -21,6 +21,30 @@
   font-style: normal;
 }
 
+
+.space-mono-regular {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.space-mono-bold {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.space-mono-regular-italic {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.space-mono-bold-italic {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: italic;
+}
 
 pre {
     font-style: italic;
@@ -135,9 +159,6 @@ header div h1 span {
 
 #street-cred {
    background-color: #547baa;
-}
-
-#street-cred {
    display: flex;
    list-style: none;
    padding: 0;
@@ -152,13 +173,16 @@ header div h1 span {
    justify-content: space-around;
    list-style: none;
    padding: 0;
-   margin: 0
+   margin: 0;
+    margin: 0 auto;
+    width: 100%;
 }
 
 #street-cred ul li {
    margin: 0;
    padding: 5px; /* reset */
    padding-top: 10px; /* reset */
+    display: inline-block;
 }
 
 #street-cred ul li .badge{
@@ -181,7 +205,7 @@ main h2 {
    color: #10446e;
    font-size: x-large;
    margin: 0;
-   margin-top: 0px;
+   margin-top: 1cm;
    margin-bottom: 5px;
 }
 
@@ -190,6 +214,20 @@ main h2::before {
     font-family: "jura";
     font-style: italic;
     color: #cc0000;
+}
+
+
+.Progress {
+    background-color: var(--bgColor-neutral-muted);
+    border-radius: var(--borderRadius-medium);
+    display: flex;
+    height: 8px;
+    outline: 1px solid #0000;
+    overflow: hidden;
+}
+
+p {
+    margin-left: 0.66cm;
 }
 
 .shell {
@@ -218,13 +256,12 @@ main h2::before {
          <ul>
             <li><img id="email" class="badge" src="https://img.shields.io/badge/email-scott%40mightdevco.com-orange?style=plastic&logo=minutemailer&labelColor=%23333333&link=mailto%3Ascott%40uberscott.com"></li>
             <li><img id="phone" class="badge" src="https://img.shields.io/badge/phone-323.572.6872-mauv?style=plastic&logo=theconversation&color=red&logoColor=yellow&labelColor=%23333333"></li>
-            <li><img id="location" class="badge" src="https://img.shields.io/badge/googlemaps-Farmington_MO-blue?style=plastic&color=%232196f3&logo=googlemaps&labelColor=%23333333&logoColor=red"></li>
+            <li><img id="location" class="badge" src="https://img.shields.io/badge/location-Farmington_MO-blue?style=plastic&color=%232196f3&logo=googlemaps&labelColor=%23333333&logoColor=red"></li>
          </ul>
        </section>
 
          <main>
        <section id="titles">
-          <pre>&gt; echo $TITLE</pre>
           <h2>DevOps | Cloud & SRE Engineer | Software Developer</h2>
 
          <p>25 years experience in Ops and Software Development. Very strong in Kubernetes, Docker, GCP, AWS, Helm, Skaffold, Terraform, Rust, Java, Flutter/Dart, PostgreSQL, Neo4j.  and more (See the Skills  section for an exhaustive list of Skills.)</p>
@@ -237,6 +274,10 @@ main h2::before {
 
            <p>Still loves to code but presently seeking a position in DevOps that is slightly weighted towards Ops for a better work/life balance.  Very interested in finding the right DevOps position and taking ownership of site and process reliability and innovation.
        </section>
+             <section id="skills">
+                 <h2>Skills</h2>
+
+             </section>
         </main>
       </page>
       <page size="A4">
