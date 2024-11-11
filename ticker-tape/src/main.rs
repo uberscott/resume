@@ -102,6 +102,7 @@ impl Curse {
             self.push(item.trim());
         }
         println!("</span>");
+        self.newline()
     }
 
 
@@ -127,6 +128,7 @@ impl Curse {
     pub(self) fn push( &mut self, name: &str ) {
         if self.index + name.len() > COLS {
             self.newline();
+            self.fill(3);
         }
         print!("<span>{name}</span>");
         self.index += name.len();

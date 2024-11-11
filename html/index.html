@@ -21,7 +21,9 @@
   font-style: normal;
 }
 
-
+.job-details {
+    margin-left: 0.66cm;
+}
 
 
 pre {
@@ -43,7 +45,7 @@ pre {
 
 
         page {
-          background: #dddddd;
+          background: white;
           display: block;
           margin: 0 auto;
           margin-bottom: 0.5cm;
@@ -167,10 +169,10 @@ header div h1 span {
 
 }
 
-main {
+.main {
   font-family: "Space Grotesk", serif;
   font-optical-sizing: auto;
-  font-weight: 500;
+  font-weight: 400;
   font-style: normal;
   margin: 0;
   margin-left: auto;
@@ -179,7 +181,7 @@ main {
   padding-right: 1cm;
 }
 
-main h2 {
+.main h2 {
    color: #10446e;
    font-size: x-large;
    margin: 0;
@@ -187,11 +189,53 @@ main h2 {
    margin-bottom: 5px;
 }
 
-main h2::before {
+
+.main h2::before {
     content: "> ";
     font-family: "jura",serif;
     font-weight: 900;
     color: #cc0000;
+}
+
+
+
+
+h3 {
+    color: #10446e;
+    font-size: large;
+    margin: 0;
+    margin-top: 1cm;
+    margin-bottom: 5px;
+
+    font-family: "Space Grotesk", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+
+.title {
+    color: #10446e;
+    font-size: large;
+    margin: 0;
+    margin-top: 1cm;
+    margin-bottom: 5px;
+
+    font-family: "Space Grotesk", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.date-range{
+    color: dimgrey;
+    font-size: medium;
+    margin: 0;
+    font-family: "Space Grotesk", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
 }
 
 
@@ -204,7 +248,7 @@ main h2::before {
     overflow: hidden;
 }
 
-html body main section div {
+html body .main section div {
     margin-left: 0.66cm;
 }
 
@@ -268,6 +312,71 @@ cc9999 faded red
 }
 
 
+.workExperience>ul>li ul {
+    padding-left: 0.5cm;
+    list-style-type: disc;
+}
+.workExperience>ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+.workExperience>ul>li {
+    position: relative;
+    margin: 0;
+    padding-bottom: 0.5cm;
+    padding-left: 0.5cm;
+}
+/*
+.workExperience>ul>li:before {
+    background-color: #b8abab;
+    width: 0.05cm;
+    content: '';
+    position: absolute;
+    top: 0.1cm;
+    bottom: -0.2cm; /* change this after border removal * /
+    left: 0.05cm;
+}
+.workExperience>ul>li::after {
+    content: '';
+    position: absolute;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' aria-hidden='true' viewBox='0 0 32 32' focusable='false'%3E%3Ccircle stroke='none' fill='%23484444' cx='16' cy='16' r='10'%3E%3C/circle%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: -0.09cm;
+    top: 0;
+    width: 0.35cm;
+    height: 0.35cm;
+}
+*/
+
+.jobPosition {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.jobPosition span {
+    font-family: "Space Grotesk", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-size: medium;
+}
+
+.jobPosition .bolded{
+    font-family: "Space Grotesk", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: large;
+}
+
+div.projectName.bolded {
+    font-family: "Aldrich", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
 
              </style>
        </head>
@@ -280,13 +389,14 @@ cc9999 faded red
           </header>
              <section id="street-cred">
              <ul>
+                 <li><a href="https://uberscott.com"><img id="website" class="badge" src="https://img.shields.io/badge/website-uberscott.com-blue?style=plastic&logo=html5&color=red&logoColor=yellow&labelColor=%23333333"></a></li>
                 <li><img id="email" class="badge" src="https://img.shields.io/badge/email-scott%40mightdevco.com-orange?style=plastic&logo=minutemailer&labelColor=%23333333&link=mailto%3Ascott%40uberscott.com"></li>
                 <li><img id="phone" class="badge" src="https://img.shields.io/badge/phone-323.572.6872-mauv?style=plastic&logo=theconversation&color=red&logoColor=yellow&labelColor=%23333333"></li>
             <li><img id="location" class="badge" src="https://img.shields.io/badge/location-Farmington_MO-blue?style=plastic&color=%232196f3&logo=googlemaps&labelColor=%23333333&logoColor=red"></li>
          </ul>
        </section>
 
-         <main>
+         <div class="main">
        <section id="titles">
           <h2>DevOps | Cloud & SRE Engineer | Software Developer</h2>
            <div>
@@ -304,30 +414,133 @@ cc9999 faded red
 
                  <div>
 
+<span class="cat GCP">
+<span class="title">GCP</span><span class="dots">...</span><span>Compute Engine</span><span class="dots">...</span><span>GKE</span><span class="dots">...</span><span>Buckets</span><span class="dots">...</span><span>Pub/Sub</span><span class="dots">...</span><span>Image Registry</span><span class="dots">.</span><br><span class="dots">...</span><span>IAM</span><span class="dots">...</span><span>GKE Ingress with managed certs</span></span>
+                     <span class="dots">.........................</span><br><span class="cat AWS">
+<span class="title">AWS</span><span class="dots">...</span><span>EC2 S3</span><span class="dots">...</span><span>lambda</span><span class="dots">...</span><span>route 53</span><span class="dots">...</span><span>SQS</span><span class="dots">...</span><span>SNS Beanstalk IAM</span><span class="dots">...</span></span>
+                     <span class="dots">...</span><br><span class="cat OPS">
+<span class="title">OPS</span><span class="dots">...</span><span>Docker</span><span class="dots">...</span><span>Kubernetes</span><span class="dots">...</span><span>Helm</span><span class="dots">...</span><span>Skaffold</span><span class="dots">...</span><span>Terraform</span><span class="dots">...</span><span>Kibana</span><br><span class="dots">...</span><span>Beats</span><span class="dots">...</span><span>Logstash</span><span class="dots">...</span><span>Prometheus</span><span class="dots">...</span><span>Zipkin</span><span class="dots">...</span><span>Grafana</span><span class="dots">...</span><span>Jaeger</span></span>
+                     <span class="dots">....</span><br><span class="cat OS">
+<span class="title">OS</span><span class="dots">...</span><span>Mac</span><span class="dots">...</span><span>Windows</span><span class="dots">...</span><span>Linux</span><span class="dots">...</span><span>Ubuntu</span><span class="dots">...</span><span>RedHat Enterprise</span><span class="dots">...</span><span>Alpine</span><br><span class="dots">...</span><span>iOS</span><span class="dots">...</span><span>Android</span></span>
+                     <span class="dots">................................................</span><br><span class="cat CI/CD">
+<span class="title">CI/CD</span><span class="dots">...</span><span>Jenkins</span><span class="dots">...</span><span>Concourse CI</span><span class="dots">...</span><span>GitHub Actions</span><span class="dots">...</span><span class="dots">..............</span><br><span class="dots">...</span><span>Blu-Ray Disc development (BD-J)</span></span>
+                     <span class="dots">..............................</span><br><span class="cat LANG">
+<span class="title">LANG</span><span class="dots">...</span><span>Rust</span><span class="dots">...</span><span>Java</span><span class="dots">...</span><span>Dart</span><span class="dots">...</span><span>HTML5</span><span class="dots">...</span><span>TypeScript</span><span class="dots">...</span><span>JavaScript</span><span class="dots">...</span><span class="dots">..</span><br><span class="dots">...</span><span>Golang</span><span class="dots">...</span><span>Python</span></span>
+                     <span class="dots">..............................................</span><br><span class="cat MISC">
+<span class="title">MISC</span><span class="dots">...</span><span>Redis</span><span class="dots">...</span><span>Memcached</span><span class="dots">...</span><span>RabbitMQ</span><span class="dots">...</span><span>Kafka</span><span class="dots">...</span><span>Git</span><span class="dots">...</span><span class="dots">............</span><br><span class="dots">...</span><span>GitHub Actions</span><span class="dots">...</span><span>ElasticSearch</span><span class="dots">...</span><span>Solr</span></span>
+                     <span class="dots">........................</span><br>
 
-                     <span class="cat GCP">
-<span class="title">GCP</span><span class="dots">...</span><span>Compute Engine</span><span class="dots">...</span><span>GKE</span><span class="dots">...</span><span>Buckets</span><span class="dots">...</span><span>Pub/Sub</span><span class="dots">...</span><span>Image Registry</span><span class="dots">.</span><br><span>IAM</span><span class="dots">...</span><span>GKE Ingress with managed certs</span><span class="dots">...</span></span>
-                     <span class="cat AWS">
-<span class="title">AWS</span><span class="dots">...</span><span>EC2 S3</span><span class="dots">...</span><span>lambda</span><span class="dots">...</span><span class="dots">.</span><br><span>route 53</span><span class="dots">...</span><span>SQS</span><span class="dots">...</span><span>SNS Beanstalk IAM</span><span class="dots">...</span></span>
-                     <span class="cat OPS">
-<span class="title">OPS</span><span class="dots">...</span><span>Docker</span><span class="dots">...</span><span>Kubernetes</span><span class="dots">..</span><br><span>Helm</span><span class="dots">...</span><span>Skaffold</span><span class="dots">...</span><span>Terraform</span><span class="dots">...</span><span>Kibana</span><span class="dots">...</span><span>Beats</span><span class="dots">...</span><span>Logstash</span><span class="dots">...</span><span class="dots">......</span><br><span>Prometheus</span><span class="dots">...</span><span>Zipkin</span><span class="dots">...</span><span>Grafana</span><span class="dots">...</span><span>Jaeger</span><span class="dots">...</span></span>
-                     <span class="cat OS">
-<span class="title">OS</span><span class="dots">...</span><span>Mac</span><span class="dots">...</span><span>Windows</span><span class="dots">...</span><span class="dots">..</span><br><span>Linux</span><span class="dots">...</span><span>Ubuntu</span><span class="dots">...</span><span>RedHat Enterprise</span><span class="dots">...</span><span>Alpine</span><span class="dots">...</span><span>iOS</span><span class="dots">...</span><span>Android</span><span class="dots">...</span></span>
-                     <span class="cat CI/CD">
-<span class="dots">..</span><br><span class="title">CI/CD</span><span class="dots">...</span><span>Jenkins</span><span class="dots">...</span><span>Concourse CI</span><span class="dots">...</span><span>GitHub Actions</span><span class="dots">...</span><span class="dots">..............</span><br><span>Blu-Ray Disc development (BD-J)</span><span class="dots">...</span></span>
-                     <span class="cat LANG">
-<span class="title">LANG</span><span class="dots">...</span><span>Rust</span><span class="dots">...</span><span>Java</span><span class="dots">...</span><span>Dart</span><span class="dots">...</span><span class="dots">..</span><br><span>HTML5</span><span class="dots">...</span><span>TypeScript</span><span class="dots">...</span><span>JavaScript</span><span class="dots">...</span><span>Golang</span><span class="dots">...</span><span>Python</span><span class="dots">...</span></span>
-                     <span class="cat MISC">
-<span class="title">MISC</span><span class="dots">...</span><span>Redis</span><br><span>Memcached</span><span class="dots">...</span><span>RabbitMQ</span><span class="dots">...</span><span>Kafka</span><span class="dots">...</span><span>Git</span><span class="dots">...</span><span>GitHub Actions</span><span class="dots">...</span><span class="dots">..........</span><br><span>ElasticSearch</span><span class="dots">...</span><span>Solr</span><span class="dots">...</span></span>
-                     <span class="dots">.........................................</span><br>
+
+
+
                  </div>
+
+
 
 
                  </section>
 
-        </main>
+             <div class="workExperience">
+                 <h2>
+                     Work experience
+                 </h2>
+                 <ul>
+                     <li>
+                         <div class="jobPosition">
+        <span class="bolded">
+            DevOps Lead & Founding Developer
+        </span>
+                             <span>
+          Jan 2024 - Present
+        </span>
+                         </div>
+                         <div class="projectName bolded">
+        <span>Williams Heavy Industries, LLC </span>
+                         </div>
+
+
+                         <div class="smallText">
+                             <p>
+                                 Fitness programs and videos. [this &quot;position&quot; spanned multiple years and included other projects which I have omitted for the sake of brevity]
+                             </p>
+
+                             <ul>
+                                 <li>
+                                     <p>
+                                         Developed various backend microservices in Java Spring Boot running
+                                         on GKE using tools: Skaffold, Helm, Docker, Kubernetes
+                                     </p>
+                                 </li>
+                                 <li>
+                                     <p>
+                                         Developed Flutter frontend (mobile and Html)
+                                     </p>
+                                 </li>
+                             </ul>
+                         </div>
+                     </li>
+
+                 </ul>
+             </div>
+
+        </div>
       </page>
       <page size="A4">
+          <div class="main">
+
+          <div class="workExperience">
+              <h2>
+                  Work experience
+              </h2>
+              <ul>
+                  <li>
+                      <div class="jobPosition">
+        <span class="bolded">
+          Accountant
+        </span>
+                          <span>
+          Jun 2014 - Sept 2015
+        </span>
+                      </div>
+                      <div class="projectName bolded">
+        <span>
+          Accounting project name | Company name
+        </span>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="jobPosition">
+        <span class="bolded">
+          Digital Marketing Expert
+        </span>
+                          <span>
+          Nov 2020 - Sept 2021
+        </span>
+                      </div>
+                      <div class="projectName bolded">
+        <span>
+          Project name | Company name
+        </span>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="jobPosition">
+        <span class="bolded">
+          Accountant
+        </span>
+                          <span>
+          Jun 2017 - May 2020
+        </span>
+                      </div>
+                      <div class="projectName bolded">
+        <span>
+         Project name | Company name
+        </span>
+                      </div>
+                  </li>
+              </ul>
+          </div>
+          </div>
       </page>
    </body>
 </html>
